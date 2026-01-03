@@ -8,6 +8,8 @@ The project keeps the application logic intentionally simple so the focus stays 
 
 ## Architecture Overview
 
+The diagram below shows the request flow from client to services and monitoring components.
+
 ![Architecture Diagram](docs/architecture.png)
 
 The platform consists of two services deployed into a local Kubernetes cluster:
@@ -37,7 +39,7 @@ Ingress routes traffic like this:
 - GitHub Actions (CI/CD with self-hosted runner)
 - Prometheus + Grafana (monitoring and dashboards)
 
-
+Minikube is used to provide a reproducible local Kubernetes environment for development and CI testing.
 
 ## CI/CD Pipeline
 
