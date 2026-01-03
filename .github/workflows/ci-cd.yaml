@@ -1,0 +1,32 @@
+name: Build and Deploy to Minikube
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build_deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sanity checks
+        run: |
+          whoami
+          kubectl version --client
+          minikube status
+          kubectl get nodes
+
+      - name: Build images in Minikube Docker
+        run: |
+          ./scripts/build.sh "${GITHUB_SHA}"
+
+      - name: Deploy + rollout
+        run: |
+          ./scripts/deploy.sh "${GITHUB_SHA}"
+
+      - name: Smoke test
+        run: |
+          curl -s http://demo.local/api | head -c 200; echo
