@@ -93,26 +93,26 @@ Grafana is accessed locally via port-forward and dashboards can be filtered to t
 ```bash
 minikube start --driver=docker
 minikube addons enable ingress
-
+```
 ### Build images inside Minikube
 ```bash
 eval $(minikube docker-env)
 ./scripts/build.sh dev
-
+```
 ### Deploy to Kubernetes
 ```bash
 ./scripts/deploy.sh dev
-
+```
 ### Map the hostname
 ```bash
 minikube ip
-
+```
 <MINIKUBE_IP> demo.local
 
 ### Test
 ```bash
 curl http://demo.local/api
-
+```
 Open in browser:
 - http://demo.local
 - http://demo.local/api
