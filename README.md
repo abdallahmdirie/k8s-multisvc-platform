@@ -80,4 +80,39 @@ Grafana is accessed locally via port-forward and dashboards can be filtered to t
 ├── scripts/        # Build/deploy scripts used locally and by CI/CD
 └── .github/
     └── workflows/  # GitHub Actions workflow
-Post-freeze check Sun Jan  4 01:53:57 AM EAT 2026
+'''
+## Running Locally
+
+### Prerequisites
+
+- Docker
+- Minikube
+- kubectl
+
+### Start the cluster
+```bash
+minikube start --driver=docker
+minikube addons enable ingress
+
+### Build images inside Minikube
+```bash
+eval $(minikube docker-env)
+./scripts/build.sh dev
+
+### Deploy to Kubernetes
+```bash
+./scripts/deploy.sh dev
+
+### Map the hostname
+```bash
+minikube ip
+
+<MINIKUBE_IP> demo.local
+
+### Test
+```bash
+curl http://demo.local/api
+
+Open in browser:
+- http://demo.local
+- http://demo.local/api
