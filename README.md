@@ -7,7 +7,7 @@ The project keeps the application logic intentionally simple so the focus stays 
 
 
 ## Architecture Overview
-
+![Architecture Diagram](docs/architecture.png)
 The platform consists of two services deployed into a local Kubernetes cluster:
 
 - **API service**
