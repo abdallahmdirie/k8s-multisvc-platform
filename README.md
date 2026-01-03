@@ -80,7 +80,7 @@ Grafana is accessed locally via port-forward and dashboards can be filtered to t
 ├── scripts/        # Build/deploy scripts used locally and by CI/CD
 └── .github/
     └── workflows/  # GitHub Actions workflow
-'''
+
 ## Running Locally
 
 ### Prerequisites
