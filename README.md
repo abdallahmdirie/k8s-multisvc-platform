@@ -1,6 +1,6 @@
 # Kubernetes Multi-Service Platform
 
-This repository contains a small but production-style Kubernetes platform built to demonstrate containerization, orchestration, CI/CD, and observability end-to-end.
+This repository contains a small but production style Kubernetes platform built to demonstrate containerization, orchestration, CI/CD, and observability end-to-end.
 
 The project keeps the application logic intentionally simple so the focus stays on **platform mechanics** (build → deploy → route → monitor → update).
 
@@ -16,7 +16,7 @@ The platform consists of two services deployed into a local Kubernetes cluster:
   - Includes health checks for liveness/readiness
 
 - **Web service**
-  - NGINX-based static frontend
+  - NGINX based static frontend
   - Calls the API through Kubernetes Ingress
   - Validates service-to-service routing
 
