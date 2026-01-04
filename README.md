@@ -76,7 +76,7 @@ Grafana is accessed locally via port-forward and dashboards can be filtered to t
 ## Repository Structure
 
 ```text
-.
+
 ├── services/
 │   ├── api/        # Flask API service + Dockerfile
 │   └── web/        # NGINX web frontend + Dockerfile
