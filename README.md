@@ -1,6 +1,6 @@
 # Kubernetes Multi-Service Platform
 
-**Version:** v0.1.0
+![Version](https://img.shields.io/github/v/release/abdallahmdirie/k8s-multisvc-platform?style=flat-square)
 
 This repository contains a small but production style Kubernetes platform built to demonstrate containerization, orchestration, CI/CD, and observability end-to-end.
 
