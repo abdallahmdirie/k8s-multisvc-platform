@@ -1,5 +1,7 @@
 # Kubernetes Multi-Service Platform
 
+**Version:** v0.1.0
+
 This repository contains a small but production style Kubernetes platform built to demonstrate containerization, orchestration, CI/CD, and observability end-to-end.
 
 The project keeps the application logic intentionally simple so the focus stays on **platform mechanics** (build → deploy → route → monitor → update).
